@@ -1,0 +1,21 @@
+{
+  "name": "nightwing",
+  "version": "1.0.0",
+  "description": "Web testing framework with Selenium web driver",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sample": "node_modules/.bin/mocha Tests/SampleTest.js --timeout 1000000"
+  },
+  "keywords": [
+    "selenium",
+    "test"
+  ],
+  "author": "John Olawale",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "selenium-webdriver": "^4.0.0-alpha.1"
+  }
+}
