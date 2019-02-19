@@ -3,7 +3,7 @@ const { expect } = require('chai');
 
 describe('DefaultTest', () => {
     const driver = new Builder().forBrowser('chrome').build();
-    const helpers  = require('../helpers')(driver);
+    const actions  = require('../helpers/actions')(driver);
 
     it('should show homepage', async () => {
         // await driver.get('https://google.com');
@@ -15,8 +15,8 @@ describe('DefaultTest', () => {
 
         // expect(title).to.equal('Google');
 
-        await helpers.goToUrl("https://www.bing.com/");
-        await helpers.enterText('q', "James Maddison");
+        await actions.goToUrl("https://www.bing.com/");
+        await actions.enterText('name', 'q', 'Billy Jones');
     });
 
     after(async () => driver.quit());
