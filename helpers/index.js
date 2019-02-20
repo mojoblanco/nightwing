@@ -2,7 +2,7 @@ const { By } = require('selenium-webdriver');
 
 module.exports = function(driver) {
     return {
-        getElement: async function (type, identifier){
+        getElement: async (type, identifier) => {
             switch(type) {
                 case "css":
                     return await driver.findElement(By.css(identifier));
@@ -19,7 +19,6 @@ module.exports = function(driver) {
                 default:
                     return null;
             }
-
         },
     }
 };
