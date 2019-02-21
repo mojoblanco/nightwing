@@ -10,6 +10,14 @@ module.exports = function(driver) {
         enterText: async (type, identifier, text) => {
             var element = await helpers.getElement(type, identifier);
             await element.sendKeys(text);
-        }
+        },
+        clickElement: async (type, identifier) => {
+            var element = await helpers.getElement(type, identifier);
+            element.click();
+        },
+        executeScript: async (script) => {
+            await driver.executeScript(script);
+        },
+
     }
 };

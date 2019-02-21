@@ -17,6 +17,7 @@ describe('DefaultTest', () => {
 
         await actions.goToUrl("https://www.bing.com/");
         await actions.enterText('name', 'q', 'Billy Jones');
+        await actions.clickElement('id', 'sb_form_go');
     });
 
     after(async () => driver.quit());
